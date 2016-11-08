@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 module.exports = {
     entry: {
-        index: './src/index.js'
+        index: ['./src/index.js','./src/style.css']
     },// 入口模块
     output: {
         path: './dist', // 输出路径
@@ -16,6 +16,9 @@ module.exports = {
                 query: {
                     presets: ['es2015','stage-0','react']
                 }
+            },{
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
             }
         ]
     }
