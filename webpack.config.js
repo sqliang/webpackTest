@@ -1,12 +1,13 @@
 var webpack = require('webpack');
 module.exports = {
     entry: {
-        index: ['./src/index.js','./src/style.css']
+        index: ['./src/index.js']
     },// 入口模块
     output: {
         path: './dist', // 输出路径
         filename: '[name].js' //输出名称
     },
+    //webpack的核心功能包含loader,可以将任意资源转化为javascript模块
     module: {
         loaders: [
             {
