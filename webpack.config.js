@@ -38,5 +38,9 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
-    ]
+    ],
+    devServer: {
+        hot: true,
+        inline: true
+    }
 };
